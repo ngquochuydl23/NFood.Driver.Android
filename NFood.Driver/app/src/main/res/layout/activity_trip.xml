@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Ui.Trip.Trip">
+
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:background="@color/whitesmoke"
+      app:layout_constraintBottom_toTopOf="@id/stepButton"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <com.mapbox.mapboxsdk.maps.MapView
+          android:id="@+id/mapView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="0dp"
+          android:layout_marginEnd="10dp"
+          android:gravity="center_vertical"
+          android:orientation="vertical"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/navigateMapButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/layout_circle"
+            android:padding="17dp"
+            android:src="@drawable/icon_navigation"
+            android:tint="@color/green" />
+
+        <ImageView
+            android:id="@+id/moveCameraButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/layout_circle"
+            android:padding="17dp"
+            android:src="@drawable/icon_location_device"
+            android:tint="@color/green" />
+      </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/layout_bottom_sheet_trip" />
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+  <Button
+      android:id="@+id/stepButton"
+      style="@style/ButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:text="@string/i_went_to_the_restaurant"
+      app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

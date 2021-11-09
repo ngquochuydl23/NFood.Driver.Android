@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cachapa.expandablelayout.ExpandableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/expandedLayoutEarning"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="90dp"
+    app:el_duration="500"
+    app:el_expanded="false"
+    app:layout_constraintTop_toBottomOf="@id/header">
+
+  <androidx.cardview.widget.CardView
+      app:cardBackgroundColor="@color/white"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="10dp"
+      app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+      <TextView
+          android:id="@+id/lastTipDay"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Yesterday"
+          android:textColor="@color/titleTextColor"
+          android:textSize="20sp"
+          android:textStyle="bold" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/money_earned"
+              android:textAllCaps="true"
+              android:textColor="@color/textColorPrimary"
+              android:textSize="15sp" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="1.200k"
+              android:textColor="@color/titleTextColor"
+              android:textSize="20sp"
+              android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/hours_online"
+              android:textAllCaps="true"
+              android:textColor="@color/textColorPrimary"
+              android:textSize="15sp" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="8.5 hrs"
+              android:textColor="@color/titleTextColor"
+              android:textSize="20sp"
+              android:textStyle="bold" />
+        </LinearLayout>
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/total_distance"
+              android:textAllCaps="true"
+              android:textColor="@color/textColorPrimary"
+              android:textSize="15sp" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="24 Km"
+              android:textColor="@color/titleTextColor"
+              android:textSize="20sp"
+              android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/total_trip"
+              android:textAllCaps="true"
+              android:textColor="@color/textColorPrimary"
+              android:textSize="15sp" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="20"
+              android:textAllCaps="true"
+              android:textColor="@color/titleTextColor"
+              android:textSize="20sp"
+              android:textStyle="bold" />
+        </LinearLayout>
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/seeMyEarnings"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:text="@string/see_my_earnings"
+          android:textAllCaps="true"
+          android:textColor="@color/green"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+</net.cachapa.expandablelayout.ExpandableLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nsolution.nfooddriver">
+
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.CAMERA" />
+
+  <uses-permission
+      android:name="android.permission.WRITE_SETTINGS"
+      android:protectionLevel="signature"
+      tools:ignore="ProtectedPermissions" />
+
+  <uses-feature
+      android:name="android.hardware.camera"
+      android:required="true" />
+
+  <queries>
+    <intent>
+      <action android:name="android.media.action.IMAGE_CAPTURE" />
+    </intent>
+  </queries>
+
+  <application
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:networkSecurityConfig="@xml/network_security_config"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
+    <activity
+        android:name=".Ui.NFoodRewards.Congratulation"
+        android:launchMode="singleTask"/>
+    <activity
+        android:name=".Ui.Payment.PaymentDetail"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.History.DetailTripHistory"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Settings.SetupIncomingSound"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.NFoodRewards.NFoodRewardsDetail"
+        android:launchMode="singleTask"
+        android:theme="@style/TranslucentStatus" />
+    <activity
+        android:name=".Ui.Helps.HelpCenter"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Settings.SetupNavigation"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Settings.LanguageSettings"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Settings.NotificationSettings"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Settings.TripSettings"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Document.DocumentManagement"
+        android:launchMode="singleTask" />
+
+    <service
+        android:name=".Service.EarningService"
+        android:enabled="true"
+        android:exported="true" />
+
+    <activity
+        android:name=".Ui.IncomingTrip.IncomingTrip"
+        android:launchMode="standard"
+        android:noHistory="true"
+        android:showWhenLocked="true"
+        android:theme="@style/Theme.AppCompat.Transparent.NoActionBar"
+        android:turnScreenOn="true"
+        tools:targetApi="o_mr1" />
+
+    <receiver
+        android:name=".Receivers.DriverReceiver"
+        android:enabled="true"
+        android:exported="true" />
+    <receiver
+        android:name=".Receivers.BootReceiver"
+        android:enabled="true"
+        android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+        <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+      </intent-filter>
+    </receiver>
+
+    <activity
+        android:name=".Ui.Payment.Payment"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Authentication.Authentication"
+        android:launchMode="singleTask"
+        android:windowSoftInputMode="adjustResize" />
+
+    <service
+        android:name=".Service.DriverService"
+        android:enabled="true"
+        android:exported="true"
+        android:foregroundServiceType="location" />
+
+    <activity
+        android:name=".Ui.History.TripHistory"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Earnings.Earnings"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Notification.Notification"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Settings.Settings"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Profile.EditProfile"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.HomeScreen.More"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Trip.DeliveryForCustomer"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Trip.ConfirmTakeOrder"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Trip.TakeOrder"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Trip.TakePhotoOrder"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Trip.Trip"
+        android:theme="@style/MapTheme" />
+    <activity android:name=".Ui.Profile.Profile" />
+    <activity
+        android:name=".Ui.HomeScreen.HomeScreen"
+        android:theme="@style/MapTheme" />
+    <activity android:name=".Ui.SplashScreen.SplashScreen">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+  </application>
+
+</manifest>

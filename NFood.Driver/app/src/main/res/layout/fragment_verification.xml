@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Ui.Authentication.VerificationFragment">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/icon_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginVertical="10dp"
+          android:text="@string/otp_code_sent"
+          android:textColor="@color/titleTextColor"
+          android:textSize="22sp"
+          android:textStyle="bold" />
+
+      <TextView
+          android:id="@+id/message"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Enter the OTP code we sent to your registed email nguyenquochuydl123@gmail.com"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="16sp" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:text="@string/email"
+          android:textColor="@color/titleTextColor"
+          android:textSize="16sp" />
+
+      <EditText
+          android:id="@+id/enterOtpCode"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginTop="10dp"
+          android:background="@drawable/layout_border_item_size5"
+          android:backgroundTint="@color/whitesmoke"
+          android:hint="@string/holder_otp"
+          android:inputType="number"
+          android:paddingStart="10dp"
+          tools:ignore="RtlSymmetry,TextFields" />
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/messageLayout"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/resendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:text="@string/don_t_receive_the_otp"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/resendClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:text="@string/resend_code"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@id/resendMessage"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/resendTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:text="0:30"
+            android:textColor="@color/deep_sea"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@id/resendMessage"
+            tools:ignore="MissingConstraints" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/nextButton"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

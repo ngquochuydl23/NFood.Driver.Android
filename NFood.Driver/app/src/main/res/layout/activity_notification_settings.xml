@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.Settings.NotificationSettings">
+
+  <include
+      android:id="@+id/header"
+      layout="@layout/layout_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:background="@color/whitesmoke"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/header">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginHorizontal="10dp"
+              android:layout_marginTop="20dp"
+              android:text="@string/setup_sound"
+              android:textAllCaps="true"
+              android:textColor="@color/green"
+              android:textStyle="bold" />
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:id="@+id/setUpSoundLayoutClick"
+              android:layout_marginVertical="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="10dp">
+
+            <TextView
+                android:id="@+id/incomingSoundTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/incoming_trip_sound"
+                android:textColor="@color/titleTextColor"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pick_an_alert_sound_for_incoming_trips"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/incomingSoundTitle" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_arrow_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+          </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

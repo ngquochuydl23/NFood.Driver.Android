@@ -1,0 +1,83 @@
+package com.nsolution.nfooddriver.Ui.Document
+
+import android.Manifest
+import android.content.ContentValues
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
+import android.os.Bundle
+import android.provider.MediaStore
+import com.nsolution.nfooddriver.R
+import com.nsolution.nfooddriver.Ui.Base.BaseActivity
+import kotlinx.android.synthetic.main.activity_document_management.*
+
+
+class DocumentManagement : BaseActivity() {
+
+  private val REQUEST_IMAGE_CAPTURE = 1
+  private val PERMISSION_CODE = 101
+  private var photoURI: Uri? = null
+
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_document_management)
+    initialView()
+  }
+
+  private fun initialView() {
+    getBackActionBar(header, getString(R.string.document_management))
+    driverLicenseImage.setOnClickListener {
+      checkPermission()
+    }
+
+    uploadPhotoButton.setOnClickListener {
+      uploadDriverLicenseAction()
+    }
+  }
+
+  private fun uploadDriverLicenseAction() {
+
+  }
+
+  override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    super.onActivityResult(requestCode, resultCode, data)
+    if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+      driverLicenseImage.setImageURI(photoURI)
+    }
+  }
+
+  private fun openCamera() {
+    val contentValue = ContentValues()
+    contentValue.put(MediaStore.Images.Media.TITLE, "New Picture")
+    contentValue.put(MediaStore.Images.Media.DESCRIPTION, "From the camera")
+
+    photoURI = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValue)
+
+    val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+    takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
+    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+  }
+
+  private fun checkPermission() {
+    if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED
+      && checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED
+    ) {
+      val permissions =
+        arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+      requestPermissions(permissions, PERMISSION_CODE)
+    } else {
+      openCamera()
+    }
+  }
+
+  override fun onRequestPermissionsResult(
+    requestCode: Int,
+    permissions: Array<out String>,
+    grantResults: IntArray
+  ) {
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    if (requestCode == PERMISSION_CODE && grantResults.size > 0) {
+      openCamera()
+    }
+  }
+}

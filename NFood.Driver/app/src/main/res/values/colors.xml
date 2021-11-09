@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#FFFFFF</color>
+  <color name="whitesmoke">#f5f5f5</color>
+  <color name="colorAccent">#7ac142</color>
+  <color name="textColorPrimary">#606060</color>
+  <color name="gray">#606060</color>
+  <color name="light_gray">#Bebebe</color>
+  <color name="white">#FFFFFF</color>
+  <color name="black">#000000</color>
+  <color name="titleTextColor">#000000</color>
+  <color name="green">#7ac142</color>
+  <color name="accept_color">#7ac142</color>
+  <color name="light_green">#907ac142</color>
+  <color name="light_red">#60FF0805</color>
+
+  <color name="yellow">#efa536</color>
+  <color name="red">#D30000</color>
+  <color name="transparent">#50FFFFFF</color>
+
+  <color name="deep_sea">#13acbf</color>
+  <color name="orange">#da8323</color>
+  <color name="light_orange">#ffa500</color>
+</resources>

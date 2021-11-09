@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    tools:context=".Ui.Settings.SetupNavigation">
+
+  <include
+      android:id="@+id/header"
+      layout="@layout/layout_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginBottom="20dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/header">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginHorizontal="10dp"
+              android:layout_marginTop="10dp"
+              android:text="@string/choose_navigation_app"
+              android:textAllCaps="true"
+              android:textColor="@color/green"
+              android:textStyle="bold" />
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:id="@+id/selectNFoodNavigation"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingHorizontal="10dp"
+              android:paddingVertical="15dp">
+
+            <TextView
+                android:id="@+id/nfoodNavigationTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/nfood_navigation"
+                android:textColor="@color/titleTextColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/nfoodRadioButton"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/recommended_stay_in_this_app"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/nfoodRadioButton"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nfoodNavigationTitle" />
+
+            <RadioButton
+                android:id="@+id/nfoodRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_arrow_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+          <include
+              layout="@layout/layout_line_view"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="50dp" />
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:id="@+id/selectGoogleMapNavigation"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingHorizontal="10dp"
+              android:paddingVertical="15dp">
+
+            <TextView
+                android:id="@+id/googleMapTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/google_map"
+                android:textColor="@color/titleTextColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/googlemapRadioButton"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/launches_in_separate_app"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/googlemapRadioButton"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/googleMapTitle" />
+
+            <RadioButton
+                android:id="@+id/googlemapRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_arrow_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="7.5dp"
+          app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginHorizontal="10dp"
+              android:layout_marginTop="10dp"
+              android:text="@string/navigation_settings"
+              android:textAllCaps="true"
+              android:textColor="@color/green"
+              android:textStyle="bold" />
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:id="@+id/setStoreStatusLayoutClick"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginVertical="10dp"
+              android:padding="10dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/navigation_voice"
+                android:textColor="@color/titleTextColor"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/listen_to_voice_directions_from_the_device"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <Switch
+                android:id="@+id/navigationVoiceSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+          </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

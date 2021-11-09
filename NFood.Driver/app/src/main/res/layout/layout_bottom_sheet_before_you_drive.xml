@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/closeButton"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="7.5dp"
+        android:src="@drawable/icon_close"
+        android:tint="@color/gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/driverChecklistTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:text="@string/driver_checklist"
+        android:textColor="@color/titleTextColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/check_out_what_is_needed_to_start_a_trip"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@id/driverChecklistTitle"
+        app:layout_constraintRight_toRightOf="@id/driverChecklistTitle"
+        app:layout_constraintTop_toBottomOf="@id/driverChecklistTitle" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="18sp"
+      android:layout_marginTop="10dp"
+      android:paddingVertical="15dp"
+      android:paddingHorizontal="10dp"
+      android:drawablePadding="20dp"
+      android:drawableStart="@drawable/icon_checked"
+      android:text="@string/phone_mount"
+      android:textColor="@color/titleTextColor" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="18sp"
+      android:paddingVertical="15dp"
+      android:paddingHorizontal="10dp"
+      android:drawablePadding="20dp"
+      android:drawableStart="@drawable/icon_checked"
+      android:text="@string/phone_charger"
+      android:textColor="@color/titleTextColor" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="18sp"
+      android:paddingVertical="15dp"
+      android:paddingHorizontal="10dp"
+      android:drawablePadding="20dp"
+      android:drawableStart="@drawable/icon_checked"
+      android:text="@string/uniform"
+      android:textColor="@color/titleTextColor" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="18sp"
+      android:paddingVertical="15dp"
+      android:paddingHorizontal="10dp"
+      android:drawablePadding="20dp"
+      android:drawableStart="@drawable/icon_checked"
+      android:text="@string/food_bag"
+      android:textColor="@color/titleTextColor" />
+
+  <Button
+      android:id="@+id/okButton"
+      style="@style/ButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:text="@string/okay" />
+</LinearLayout>

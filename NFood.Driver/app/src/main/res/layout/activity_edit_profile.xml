@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Ui.Profile.EditProfile">
+
+  <include
+      android:id="@+id/header"
+      layout="@layout/layout_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingVertical="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatarView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/illustration_avatar_default"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:background="@color/white"
+          android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/full_name"
+            android:textSize="16sp"
+            android:textColor="@color/titleTextColor" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/layout_border_item_size5"
+            android:backgroundTint="@color/whitesmoke"
+            android:hint="@string/nguyen_van_a"
+            android:minHeight="50dp"
+            android:paddingStart="10dp"
+            android:textSize="15sp"
+            tools:ignore="RtlSymmetry" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:background="@color/white"
+          android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/email"
+            android:textSize="16sp"
+            android:textColor="@color/titleTextColor"  />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/layout_border_item_size5"
+            android:backgroundTint="@color/whitesmoke"
+            android:hint="@string/nguyenvana_gmail_com"
+            android:minHeight="50dp"
+            android:paddingStart="10dp"
+            android:textSize="15sp"
+            tools:ignore="RtlSymmetry" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:background="@color/white"
+          android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/phone_number"
+            android:textSize="16sp"
+            android:textColor="@color/titleTextColor" />
+
+        <EditText
+            android:id="@+id/editPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/layout_border_item_size5"
+            android:backgroundTint="@color/whitesmoke"
+            android:hint="081234567"
+            android:minHeight="50dp"
+            android:paddingStart="10dp"
+            android:textSize="15sp"
+            tools:ignore="RtlSymmetry" />
+      </LinearLayout>
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+  <Button
+      android:id="@+id/saveChangeButton"
+      style="@style/ButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:text="@string/save_change" />
+</LinearLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "91203256567",
+    "project_id": "nfood-driver",
+    "storage_bucket": "nfood-driver.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91203256567:android:ae4816b03df1720f8053f2",
+        "android_client_info": {
+          "package_name": "com.nsolution.nfooddriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91203256567-dbcommlqlr8rmjas6be2eta9p4ls5cqm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nsolution.nfooddriver",
+            "certificate_hash": "a6f451cc296e7061cbac5fcb37628d62f2cdd238"
+          }
+        },
+        {
+          "client_id": "91203256567-1meps68g3fvr5phtoic4f9nrjqdf69u8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk3qDuV6TCyKD8bD5cGeXnh-pxj-mvogc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91203256567-1meps68g3fvr5phtoic4f9nrjqdf69u8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    tools:context=".Ui.History.TripHistory">
+
+  <include
+      android:id="@+id/header"
+      layout="@layout/layout_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/header">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp">
+
+          <TextView
+              android:id="@+id/selectDateTime"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:drawableEnd="@drawable/icon_arrow_down"
+              android:drawablePadding="10dp"
+              android:text="Today, 01 Jan 2021"
+              android:textColor="@color/titleTextColor"
+              android:textSize="18sp"
+              android:textStyle="bold" />
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="20dp"
+              android:padding="10dp">
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="2.039.000đ"
+                android:textColor="@color/green"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/earnings"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/total" />
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="74dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+              <TextView
+                  android:id="@+id/numberCompletedOrder"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="20"
+                  android:textColor="@color/titleTextColor"
+                  android:textSize="24sp"
+                  android:textStyle="bold"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="@string/total_trips"
+                  android:textColor="@color/textColorPrimary"
+                  android:textSize="16sp"
+                  app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+              <TextView
+                  android:id="@+id/numberCancelledOrder"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="2"
+                  android:textColor="@color/titleTextColor"
+                  android:textSize="24sp"
+                  android:textStyle="bold"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="@string/trips_cancelled"
+                  android:textColor="@color/textColorPrimary"
+                  android:textSize="16sp"
+                  app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+          </LinearLayout>
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/listHistoryTrip"
+          android:layout_width="match_parent"
+          tools:itemCount="3"
+          tools:listitem="@layout/item_trip_history"
+          android:layout_height="wrap_content" />
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

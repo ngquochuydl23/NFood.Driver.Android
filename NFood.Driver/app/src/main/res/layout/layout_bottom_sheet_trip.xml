@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetStep1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="180dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/whitesmoke"
+      android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:paddingHorizontal="10dp"
+          android:paddingVertical="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/customerAvatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/illustration_avatar_default"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/orderByTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="54dp"
+            android:text="Order by"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@id/customerAvatar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/customerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="54dp"
+            android:text="Nguyễn Quốc Huy"
+            android:textColor="@color/titleTextColor"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/customerAvatar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/orderByTitle" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/icon_phone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/restaurantInformationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/white">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addressLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:paddingHorizontal="10dp">
+
+          <ImageView
+              android:id="@+id/restaurantAvatar"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:src="@drawable/icon_restaurant"
+              android:tint="@color/green"
+              app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <TextView
+              android:id="@+id/restaurantName"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="10dp"
+              android:text="Trà sữa 8678 Bùi Thị Xuân"
+              android:textColor="@color/titleTextColor"
+              android:textSize="17sp"
+              android:textStyle="bold"
+              app:layout_constraintLeft_toRightOf="@id/restaurantAvatar"
+              app:layout_constraintRight_toRightOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <TextView
+              android:id="@+id/restaurantAddress"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="10dp"
+              android:layout_marginTop="2dp"
+              android:text="242 Bùi Thị Xuân, Phường 2, Thành phố Đà Lạt"
+              android:textColor="@color/textColorPrimary"
+              android:textSize="15sp"
+              app:layout_constraintLeft_toRightOf="@id/restaurantAvatar"
+              app:layout_constraintRight_toRightOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/restaurantName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+          <Button
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:background="@color/white"
+              android:drawableTop="@drawable/icon_phone"
+              android:paddingVertical="10dp"
+              android:text="@string/call"
+              android:textAllCaps="false"
+              android:textColor="@color/green"
+              android:textStyle="bold" />
+
+
+          <Button
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:background="@color/white"
+              android:drawableTop="@drawable/icon_phone"
+              android:paddingVertical="10dp"
+              android:text="@string/see_list_food"
+              android:textAllCaps="false"
+              android:textColor="@color/green"
+              android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@drawable/view_shadow"
+            app:layout_constraintBottom_toBottomOf="parent" />
+      </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:paddingHorizontal="10dp"
+          android:paddingVertical="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_location"
+            android:tint="@color/green"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/customerAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="59 Xô Viết Nghệ Tĩnh"
+            android:textColor="@color/titleTextColor"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/customerDetailAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="2dp"
+            android:text="59 Xô Viết Nghệ Tĩnh, Phường 7, Thành phố Đà Lạt"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/customerAddress" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Payment for restaurant"
+              android:textColor="@color/textColorPrimary"
+              android:textSize="17sp" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="right"
+              android:text="55.000đ"
+              android:textColor="@color/titleTextColor"
+              android:textSize="17sp"
+              android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/fee"
+              android:textColor="@color/textColorPrimary"
+              android:textSize="17sp" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="right"
+              android:text="-5.000đ"
+              android:textColor="@color/titleTextColor"
+              android:textSize="17sp"
+              android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="30dp">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Collect cash from customers"
+              android:textColor="@color/gray"
+              android:textSize="17sp" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="right"
+              android:text="70.000đ"
+              android:textColor="@color/titleTextColor"
+              android:textSize="17sp"
+              android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cancelOrderButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/layout_border_rectangle_red_stroke_size5"
+            android:text="@string/cancel_order"
+            android:textAllCaps="false"
+            android:textColor="@color/red"
+            android:textSize="16.5sp"
+            android:textStyle="bold" />
+      </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+  </LinearLayout>
+</androidx.cardview.widget.CardView>

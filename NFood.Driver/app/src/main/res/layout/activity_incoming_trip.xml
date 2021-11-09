@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.IncomingTrip.IncomingTrip">
+
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:padding="10dp"
+      app:cardBackgroundColor="@color/whitesmoke"
+      app:layout_constraintBottom_toBottomOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"
+          android:paddingHorizontal="20dp">
+
+
+        <TextView
+            android:id="@+id/pickUpAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Trà sữa 8678 Bùi Thị Xuân"
+            android:textColor="@color/titleTextColor"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pickUpDetailAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:text="242 Bùi Thị Xuân, Phường 2, Thành phố Đà Lạt"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pickUpAddress" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/addressLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:paddingHorizontal="20dp">
+
+
+        <TextView
+            android:id="@+id/dropOffAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="59 Xô Viết Nghệ Tĩnh"
+            android:textColor="@color/titleTextColor"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dropOffDetailAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:text="59 Xô Viết Nghệ Tĩnh, Phường 7, Thành phố Đà Lạt"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dropOffAddress" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="30dp"
+          android:layout_marginTop="20dp"
+          android:background="@drawable/layout_circle"
+          android:backgroundTint="@color/deep_sea"
+          android:padding="10dp"
+          android:text="Distance - 1.5 km"
+          android:textColor="@color/white"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="20dp"
+          android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="55.000đ"
+            android:textColor="@color/titleTextColor"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="3dp"
+          android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fee"
+            android:textColor="@color/gray"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="5.000đ"
+            android:textColor="@color/titleTextColor"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/action_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="10dp"
+          android:layout_marginTop="20dp"
+          android:background="@color/white"
+          android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/declineButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_border_rectangle_size5"
+            android:text="@string/decline"
+            android:textStyle="bold"
+            android:textColor="@color/green"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/acceptButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:background="@drawable/layout_border_rectangle_size5"
+            android:backgroundTint="@color/green"
+            android:text="@string/accept"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+      </LinearLayout>
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
